@@ -199,4 +199,3 @@ Yapay zekâ desteği yalnızca yazım denetimi ile sınırlı değildir. Çıkt�
 
 ---
 
-**Teslim öncesi kontrol:** Katkı beyanını ekipçe doğrulayın, notebook'u çalışma zamanını sıfırlayarak **Tümünü çalıştır** ile yeniden çalıştırın, dosyanın gerçekten `proje1/` klasöründe olduğunu kontrol edin ve notebook'u hem GitHub'a hem STIX'e yükleyin. README tek başına ödev tesliminin yerine geçmez.
