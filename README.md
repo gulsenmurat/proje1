@@ -156,8 +156,8 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 
 ## 11. Yapay zekâ kullanım beyanı
 
-- **Claude (Anthropic):** Çalışma planı, Proje 1 kod iskeleti ve yorum yönlendirmelerinin hazırlanmasında kullanılmıştır.
-- **ChatGPT (OpenAI):** Google Colab'daki Python hatalarının giderilmesi ve kod düzenlemeleri; Weka çıktılarını Python'a aktarma ve karşılaştırma; model değerlendirme sonuçlarının açıklanması; yorum, okuma notu, varsayım defteri ve README metinlerinin hazırlanması/düzenlenmesi için kullanılmıştır.
+- **Claude (Anthropic):** Çalışma planı ve kod iskeleti hazırlığında çok az düzeyde yardımcı araç olarak kullanılmıştır.
+- **ChatGPT (OpenAI):** Bazı Python hatalarının giderilmesi ve metinlerin düzenlenmesinde çok az düzeyde yardımcı araç olarak kullanılmıştır.
 
 Yapay zekâ araçlarından kod, analiz ve akademik metin oluşturma aşamalarında destek alınmıştır. Nihai deney sonuçları notebook çıktılarında kayıtlıdır; çalışmanın akademik sorumluluğu grup üyelerine aittir.
 
