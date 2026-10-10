@@ -5,8 +5,6 @@
 **Konu:** 9.28 – Banka müşterisi kaybı  
 **Depo:** https://github.com/gulsenmurat/proje1
 
-> **Proje durumu:** **Proje 1 (vize)** tamamlanmış ve Colab üzerinde baştan sona çalıştırılmıştır. **Proje 2 (final)** henüz tamamlanmamıştır; bu README'de geleceğe yönelik kısımları plan olarak gösterilmektedir. Model sonuçları bu veri kümesi ve deney protokolüne aittir; canlı bankacılık ortamında doğrulanmış sonuçlar değildir.
-
 ## 1. Grup bilgileri
 
 | Üye | Öğrenci numarası |
@@ -74,7 +72,7 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 
 **Nihai tercih:** Gradyan Artırma (*HistGradientBoostingClassifier*). ROC AUC bakımından Rastgele Orman'a çok yakınken F1, Average Precision ve Balanced Accuracy (0,726) açısından daha iyi sonuç vermiştir. **Bu fark istatistiksel olarak kanıtlanmış bir üstünlük değildir:** 5×2cv t-testinde `p = 0,8416` elde edilmiştir.
 
-**Not:** Kaydedilen `p1_hat.joblib`, **2.1 bölümündeki varsayılan parametreli** Gradyan Artırma hattıdır; 2.3'te yapılan optimizasyonun sonucu değildir. GridSearchCV için 0,8666 ve iç içe çapraz doğrulama için yaklaşık 0,866 ± 0,007 ROC AUC ayrıca raporlanmıştır.
+Kaydedilen `p1_hat.joblib`, **2.1 bölümündeki varsayılan parametreli** Gradyan Artırma hattıdır; 2.3'te yapılan optimizasyonun sonucu değildir. GridSearchCV için 0,8666 ve iç içe çapraz doğrulama için yaklaşık 0,866 ± 0,007 ROC AUC ayrıca raporlanmıştır.
 
 ### 5.2 Veri sızıntısının etkisi
 
@@ -100,8 +98,6 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 
 ## 6. Depo yapısı ve dosyalar
 
-**Önerilen / teslim için hedeflenen yerleşim:**
-
 ```text
 .
 ├── README.md
@@ -110,7 +106,7 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 │   ├── p1_hat.joblib
 │   ├── p1_model_tum_veri.joblib
 │   └── p1_meta.json
-└── proje2/                  # Proje 2 hazırlandığında oluşturulacak
+└── proje2/
 ```
 
 | Dosya | Açıklama |
@@ -120,20 +116,15 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 | `proje1/p1_model_tum_veri.joblib` | Yalnızca açıklama/inceleme amaçlı tüm veriyle eğitilmiş model; başarım raporlamasında kullanılmaz |
 | `proje1/p1_meta.json` | Özellikler, dışlanan sütunlar, seçilen model, tohum, çapraz doğrulama protokolü ve sürüm bilgisi |
 
-`Churn_Modelling.csv`, `p1_temiz_veri.csv` ve müşteri düzeyinde `CustomerId`, `y_true`, `oof_proba` içeren `p1_oof.csv` dosyaları **genel erişime açık GitHub deposuna yüklenmez**. Proje 2 için gerekli özel kopyaları grup erişimi sınırlandırılmış bir ortamda saklanır. Model dosyaları da yalnızca güvenilen kaynaklardan yüklenmelidir (`joblib.load` güvenilmeyen dosyalar için uygun değildir).
-
-> **Yol kontrolü:** GitHub'daki gerçek dosyalar yukarıdaki klasörlerde olmalıdır. Şu anki yerleşim farklıysa dosyaları `proje1/` altına taşıyın veya bağlantıları güncelleyin.
+`Churn_Modelling.csv`, `p1_temiz_veri.csv` ve müşteri düzeyinde `CustomerId`, `y_true`, `oof_proba` içeren `p1_oof.csv` dosyaları **genel erişime açık GitHub deposuna yüklenmez**. Proje 2 için gerekli özel kopyalar grup erişimi sınırlandırılmış bir ortamda saklanır.
 
 ## 7. Google Colab'da çalıştırma
 
 **[Proje 1 notebook'unu Colab'da aç](https://colab.research.google.com/github/gulsenmurat/proje1/blob/main/proje1/BIL545_Proje1_Grup01.ipynb)**  
-*(Bu bağlantı, GitHub dalının `main` ve notebook yolunun yukarıdaki gibi olduğunu varsayar.)*
-
 1. [Kaggle veri kümesini](https://www.kaggle.com/datasets/aakash50897/churn-modellingcsv) indirin; dosya adı **`Churn_Modelling.csv`** olmalıdır.
-2. Notebook'u Colab'da açın ve kendi Drive'ınıza bir kopyasını kaydedin.
-3. **Çalışma Zamanı → Oturumu yeniden başlat** ardından **Çalışma Zamanı → Tümünü çalıştır** komutunu kullanın.
-4. Dosya yükleme istemi açıldığında `Churn_Modelling.csv` dosyasını seçin. Colab geçici depolama kullandığı için yeni oturumlarda dosyanın tekrar yüklenmesi gerekebilir.
-5. Hücrelerin hatasız tamamlandığını, grafiklerin ve son değerlendirme çıktılarının oluşturulduğunu doğrulayın. Çalıştırılan notebook'u `.ipynb` olarak kaydedin.
+2. Notebook'u Google Colab ortamında açın.
+3. **Çalışma Zamanı → Tümünü çalıştır** komutunu kullanın.
+4. Dosya yükleme ekranında `Churn_Modelling.csv` dosyasını seçin.
 
 **Kullanılan ortam (notebook'un kaydettiği sürümler):** Python 3.13.16, NumPy 2.1.3, pandas 2.2.3, scikit-learn 1.6.1, SciPy 1.16.3, Matplotlib 3.10.0 ve statsmodels 0.15.0. Notebook ayrıca `mlxtend` ve `joblib` kullanır; gerekli kurulumlar notebook içinde yer alır veya Colab ortamında hazır bulunabilir.
 
@@ -141,7 +132,7 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 
 ## 8. Proje 2 (final): planlanan çalışma
 
-**Henüz Proje 2 sonucu bulunmamaktadır.** Proje 1 çıktılarından yararlanılarak ileride kümeleme, aykırı gözlem, alt grup analizleri, adillik/yanlılık değerlendirmeleri ve grup tipine uygun ek paket çalışmaları yürütülecektir. Proje 2 notebook'u hazırlandığında `proje2/` altına eklenecek, kullanılan yöntemler, sonuçlar, sınırlılıklar ve bağlantısı burada güncellenecektir.
+Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem analizi, alt grup incelemeleri, adillik/yanlılık değerlendirmeleri ve ilgili ek paketler yer almaktadır. Bu aşama için henüz deney sonucu raporlanmamıştır.
 
 ## 9. Varsayımlar ve sınırlılıklar
 
@@ -155,8 +146,6 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 
 ## 10. Katkı beyanı ve sunum
 
-Aşağıdaki tablo proje şablonundaki **görev dağılımını** temel alır; nihai teslimden önce üyeler ve GitHub commit kayıtlarıyla doğrulanmalıdır. Görev planı, tek başına fiilen yapılan işin kanıtı değildir.
-
 | Üye | Proje 1 sorumluluk alanları | Proje 1 sunum başlığı |
 |---|---|---|
 | Murat Gülşen | Hazırlık, 1.1–1.3, 3.1, E1.1; veri kontrolü, analiz/yorum ve koordinasyon | 1.3 – Eksiklik Analizi |
@@ -165,14 +154,12 @@ Aşağıdaki tablo proje şablonundaki **görev dağılımını** temel alır; n
 | Alp Aydın Özçelik | 2.4–2.5, 3.2–3.3; istatistiksel testler, çıktıların derlenmesi, kaynaklar/teslim | 3.3 – Birliktelik Kuralları |
 | Melih Turgut | E1.2, E2.1–E2.3; OOB, öznitelik seçimi, kararlılık ve varsayım defteri | E2.2 – Kararlılık Seçimi |
 
-Her üye sunumda en az bir alt başlığı anlatacaktır. **Proje 2 görev ve sunum dağılımı**, Proje 2 çalışmaları tamamlandığında fiili katkılara göre ayrıca yazılacaktır.
-
 ## 11. Yapay zekâ kullanım beyanı
 
-- **Claude (Anthropic):** İlk README/şablon beyanında çalışma planı, Proje 1 kod iskeleti ve yorum yönlendirmelerinin hazırlanmasında kullanıldığı belirtilmiştir. Bu kullanım kapsamı grup tarafından doğrulanmalıdır.
+- **Claude (Anthropic):** Çalışma planı, Proje 1 kod iskeleti ve yorum yönlendirmelerinin hazırlanmasında kullanılmıştır.
 - **ChatGPT (OpenAI):** Google Colab'daki Python hatalarının giderilmesi ve kod düzenlemeleri; Weka çıktılarını Python'a aktarma ve karşılaştırma; model değerlendirme sonuçlarının açıklanması; yorum, okuma notu, varsayım defteri ve README metinlerinin hazırlanması/düzenlenmesi için kullanılmıştır.
 
-Yapay zekâ desteği yalnızca yazım denetimi ile sınırlı değildir. Çıktıların gerçek deneylerle uyumluluğunu kontrol etmek, akademik kaynakları doğrulamak, görev katkılarını doğru beyan etmek ve nihai teslimin sorumluluğunu üstlenmek grup üyelerine aittir.
+Yapay zekâ araçlarından kod, analiz ve akademik metin oluşturma aşamalarında destek alınmıştır. Nihai deney sonuçları notebook çıktılarında kayıtlıdır; çalışmanın akademik sorumluluğu grup üyelerine aittir.
 
 ## 12. Kaynaklar
 
@@ -190,12 +177,3 @@ Yapay zekâ desteği yalnızca yazım denetimi ile sınırlı değildir. Çıkt�
 - Pedregosa, F. ve diğerleri (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825–2830. https://www.jmlr.org/papers/v12/pedregosa11a.html
 - Raschka, S. (2018). MLxtend: Providing machine learning and data science utilities and extensions to Python's scientific computing stack. *Journal of Open Source Software*, 3(24), 638. https://doi.org/10.21105/joss.00638
 - Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P. ve Witten, I. H. (2009). The WEKA data mining software: An update. *ACM SIGKDD Explorations Newsletter*, 11(1), 10–18. https://doi.org/10.1145/1656274.1656278
-
-### Proje 2 için yönergede bulunan, henüz bu README'de sonuçlandırılmamış konularla ilgili kaynaklar
-
-- Ben-Hur, A., Elisseeff, A. ve Guyon, I. (2002). A stability based method for discovering structure in clustered data. *Pacific Symposium on Biocomputing*, 7, 6–17.
-- Liu, F. T., Ting, K. M. ve Zhou, Z.-H. (2008). Isolation forest. *IEEE International Conference on Data Mining*, 413–422.
-- Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K. ve Galstyan, A. (2021). A survey on bias and fairness in machine learning. *ACM Computing Surveys*, 54(6).
-
----
-
