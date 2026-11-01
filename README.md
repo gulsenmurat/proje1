@@ -110,8 +110,6 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 │   ├── p1_model_tum_veri.joblib
 │   ├── p1_kural_kanit.csv
 │   └── alp_dogrulama.json
-├── sunum/
-│   └── Alp_Aydin_Ozcelik_3_4_Dakika_Sunum.docx
 └── proje2/                      (final teslimiyle eklenecek)
 ```
 
@@ -174,7 +172,7 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 | Alp Aydın Özçelik | 2.4–2.5, 3.2–3.3; istatistiksel testler, çıktıların derlenmesi, kaynaklar/teslim | 3.3 – Birliktelik Kuralları |
 | Melih Turgut | E1.2, E2.1–E2.3; OOB, öznitelik seçimi, kararlılık ve varsayım defteri | E2.2 – Kararlılık Seçimi |
 
-**Alp bireysel sunum metni:** [3–4 dakikalık Word konuşma metni](./sunum/Alp_Aydin_Ozcelik_3_4_Dakika_Sunum.docx). Bölüm 3.3 için 436 kelime, üç kuralın müşteri sayıları, ölçütlerin yorumu, modelle karşılaştırma ve sınırlılıklar içerir. Zaman işaretleri prova içindir; süre konuşma hızına bağlıdır.
+**Alp bireysel sunumu:** Bölüm 3.3 için hazırlanan 3–4 dakikalık Word konuşma metni ayrı olarak teslim edilir; depoda tutulmaz. Üç kuralın müşteri sayıları, ölçütlerin yorumu, modelle karşılaştırma ve sınırlılıklar ele alınır.
 
 ## 11. Yapay zekâ kullanım beyanı
 
