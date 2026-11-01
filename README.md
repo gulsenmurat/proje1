@@ -70,7 +70,7 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 | Rastgele Orman | 0,859 ± 0,008 | 0,574 | 0,688 |
 | **Gradyan Artırma (seçilen)** | **0,859 ± 0,009** | **0,594** | **0,698** |
 
-**Nihai tercih:** Gradyan Artırma (*HistGradientBoostingClassifier*). ROC AUC bakımından Rastgele Orman'a çok yakınken F1, Average Precision ve Balanced Accuracy (0,726) açısından daha iyi sonuç vermiştir. **Bu fark istatistiksel olarak kanıtlanmış bir üstünlük değildir:** 5×2cv t-testinde `p = 0,8416` elde edilmiştir.
+**Nihai tercih:** Gradyan Artırma (*HistGradientBoostingClassifier*). ROC AUC bakımından Rastgele Orman'a çok yakınken F1, Average Precision ve Balanced Accuracy (0,726) açısından daha iyi sonuç vermiştir. **Bu fark istatistiksel olarak kanıtlanmış bir üstünlük değildir:** 5×2cv t-testinde `p = 0,6352` (1 Kasım 2026 hedefli yeniden çalıştırma) elde edilmiştir.
 
 Kaydedilen `p1_hat.joblib`, **2.1 bölümündeki varsayılan parametreli** Gradyan Artırma hattıdır; 2.3'te yapılan optimizasyonun sonucu değildir. GridSearchCV için 0,8666 ve iç içe çapraz doğrulama için yaklaşık 0,866 ± 0,007 ROC AUC ayrıca raporlanmıştır.
 
@@ -107,7 +107,11 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 │   ├── BIL545_Proje1_Grup01.ipynb
 │   ├── p1_hat.joblib
 │   ├── p1_meta.json
-│   └── p1_model_tum_veri.joblib
+│   ├── p1_model_tum_veri.joblib
+│   ├── p1_kural_kanit.csv
+│   └── alp_dogrulama.json
+├── sunum/
+│   └── Alp_Aydin_Ozcelik_3_4_Dakika_Sunum.docx
 └── proje2/                      (final teslimiyle eklenecek)
 ```
 
@@ -122,7 +126,7 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 
 **Veri paylaşımı:** `Churn_Modelling.csv`, `p1_temiz_veri.csv` ve müşteri düzeyinde `CustomerId`, `y_true`, `oof_proba` içeren `p1_oof.csv` dosyaları genel erişime açık GitHub deposuna yüklenmez. Proje 2'de ihtiyaç duyulursa kısıtlı erişimli bir ortamda tutulur. `joblib`/pickle model dosyaları yalnızca güvenilen kaynaktan yüklenmelidir; ayrıca scikit-learn sürümleri farklıysa yeniden üretmek tercih edilmelidir.
 
-**Not:** Notebook'un 2.5 hücresindeki "dosyaları `proje1/` klasörüne koyun" yönlendirmesi bu yerleşimle uyumludur. Proje 2 (final) henüz bu depoda bulunmamaktadır; teslim edildiğinde `proje2/` klasörüne eklenecektir.
+**Not:** Notebook 2.5, müşteri düzeyindeki temiz veri ve OOF dosyalarının açık depoya yüklenmemesi gerektiğini açıkça belirtir. Proje 2 (final) henüz bu depoda bulunmamaktadır; teslim edildiğinde `proje2/` klasörüne eklenecektir.
 
 ## 7. Google Colab'da çalıştırma
 
@@ -134,7 +138,15 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 4. `mlxtend` sürümünün **0.25.0**, veri boyutunun **10.000 × 14**, sık öğe kümesi sayısının **7.927** ve yalnızca hedef kurallarının sayısının **116** olduğunu kontrol edin. Kod hücreleri, grafikler ve açıklama bölümleri tamamlandıktan sonra notebook'u kaydedin.
 5. Proje 2 için kullanılacak model ve meta veriyi yeniden üretmek gerektiğinde 2.5 hücresinin oluşturduğu dosyalardan uygun olanları indirin. Müşteri düzeyindeki veri/OOF CSV'lerini **açık depoya** yüklemeyin.
 
-**Son doğrulanan Colab çalışma ortamı (kaydedilmiş notebook çıktısı):** Python 3.13.18; NumPy 2.1.3; pandas 2.2.3; scikit-learn 1.6.1; SciPy 1.16.3; Matplotlib 3.10.0; `mlxtend` 0.25.0; statsmodels 0.15.0. Kaydedilmiş çalıştırmada **28 kod hücresinin 28'i** çalışmış ve Python hata çıktısı kaydedilmemiştir. Diğer ortam ve sürümlerde sonuçlar yeniden kontrol edilmelidir.
+**Çalıştırma kayıtlarının kapsamı:** Önceden kaydedilmiş Colab çıktılarında Python 3.13.18, NumPy 2.1.3, pandas 2.2.3, scikit-learn 1.6.1, SciPy 1.16.3, Matplotlib 3.10.0, mlxtend 0.25.0 ve statsmodels 0.15.0 yazmaktadır. Bu bilgi eski hücre çıktılarının kaydıdır; bütün defterin güncel ortamda yeniden çalıştırıldığı anlamına gelmez.
+
+**1 Kasım 2026 Alp bölümleri doğrulaması:** Ortak hazırlık, 2.1 model karşılaştırması, 2.4–2.5, 3.2–3.3 ve kayıtlı Weka çıktısını ayrıştıran 3.4 kodu taze bir Python sürecinde hatasız çalıştırıldı. Güncellenen beş kod hücresinin çıktıları yenilendi; diğer üyelerin hücre çıktıları korundu. Çalışma ortamı Python 3.13.9, NumPy 2.3.5, pandas 2.3.3, scikit-learn 1.6.1, SciPy 1.16.3, mlxtend 0.25.0, statsmodels 0.14.5'tir. Grafik gösterimi yerel denetimde Agg ile yapıldı. Ayrıntılı kapsam ve veri dosyasının SHA-256 özeti [`alp_dogrulama.json`](./proje1/alp_dogrulama.json) dosyasındadır. Bu hedefli kontrol, teslim öncesi sıfırlanmış Colab oturumunda bütün defteri çalıştırma adımının yerine geçmez.
+
+- 5×2 testinde `t=-0,505`, `p=0,6352`, ortalama hata farkı `0,0016` bulundu. Eski kayıtta `p=0,8416` idi; anlamlı fark olmadığı kararı değişmedi. Beş McNemar bölmesi için Holm düzeltmesi eklendi; en küçük düzeltilmiş p-değeri `0,2637`.
+- 116 kuralın destek, güven, lift, Kulczynski ve IR değerleri müşteri maskelerinden bağımsız olarak yeniden hesaplanıp doğrulandı. Nadir kategori sıralaması ve null-invariance duyarlılık hesabı açıklandı. [`p1_kural_kanit.csv`](./proje1/p1_kural_kanit.csv) yalnızca toplulaştırılmış ölçütler ve sayılar içerir.
+- Her müşteri bir kez OOF test katında yer aldı; eğitim/test ayrılığı, olasılık aralığı ve dosya satır eşleştirmeleri kontrol edildi. `p1_hat.joblib` ve `p1_meta.json` yeniden üretilen dosyalarla birebir eşleşti. Mevcut eğitilmiş modelin tahminleri yeniden üretilen modelle kaynak veride karşılaştırıldı; sonuç doğrulama JSON'unda verildi. Üç mevcut model/meta dosyası korundu.
+- Weka masaüstü deneyleri yeniden çalıştırılmadı. Kayıtlı Weka çıktısıyla 116 ortak kural yeniden eşleştirildi; güven ve lift farkı sıfır bulundu.
+
 
 **Weka:** Weka 3.8.7 ile ZeroR, J48 ve Apriori karşılaştırmaları ayrıca yapılmıştır. Notebook'ta Weka'nın gerçek çıktı metinleri bulunmaktadır; Colab'da **Tümünü çalıştır** komutu Weka masaüstü uygulamasındaki deneyleri yeniden çalıştırmaz.
 
@@ -162,11 +174,15 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 | Alp Aydın Özçelik | 2.4–2.5, 3.2–3.3; istatistiksel testler, çıktıların derlenmesi, kaynaklar/teslim | 3.3 – Birliktelik Kuralları |
 | Melih Turgut | E1.2, E2.1–E2.3; OOB, öznitelik seçimi, kararlılık ve varsayım defteri | E2.2 – Kararlılık Seçimi |
 
+**Alp bireysel sunum metni:** [3–4 dakikalık Word konuşma metni](./sunum/Alp_Aydin_Ozcelik_3_4_Dakika_Sunum.docx). Bölüm 3.3 için 436 kelime, üç kuralın müşteri sayıları, ölçütlerin yorumu, modelle karşılaştırma ve sınırlılıklar içerir. Zaman işaretleri prova içindir; süre konuşma hızına bağlıdır.
+
 ## 11. Yapay zekâ kullanım beyanı
 
 - **ChatGPT (OpenAI):** Python ve Colab kodlarının hatalarının giderilmesi ve dosya kontrolünde kullanılmıştır.
 - **Claude (Anthropic):** Proje 1 defterinin ve README'nin ders yönergesine göre gözden geçirilmesinde, deponun `proje1/` klasör yapısına taşınmasında ve README güncellemelerinin hazırlanmasında kullanılmıştır. Önerilen değişiklikler grup üyesi tarafından kontrol edilip onaylanmıştır.
 
+
+- **Codex (OpenAI), 1 Kasım 2026:** Alp Aydın Özçelik'in talebiyle 2.4–2.5 ve 3.2–3.3 kontrollerinin geliştirilmesi, gerçek veriyle hedefli çalıştırma, kural kanıt tablosu ve bireysel Word sunum metninin hazırlanmasında kullanıldı. Kullanıcı adına kaynakları okuduğu veya sözlü savunma yaptığı iddia edilmez.
 
 ## 12. Kaynaklar
 

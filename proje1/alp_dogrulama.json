@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-01",
+  "dataset_sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0",
+  "dataset_source": "https://www.kaggle.com/datasets/aakash50897/churn-modellingcsv",
+  "shape": [
+    10000,
+    14
+  ],
+  "rule_count": 116,
+  "frequent_itemsets": 7927,
+  "tests": {
+    "t_5x2": -0.5046901774772099,
+    "p_5x2": 0.6352270093561065
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "scipy": "1.16.3",
+    "mlxtend": "0.25.0",
+    "statsmodels": "0.14.5"
+  },
+  "executed_cell_indices": [
+    3,
+    5,
+    6,
+    32,
+    42,
+    45,
+    52,
+    55,
+    56,
+    59
+  ],
+  "scope": "Targeted execution of Alp sections, common setup, 2.1 model selection and 3.4 Weka parser. Other sections were not rerun.",
+  "customer_level_files_published": false,
+  "existing_fitted_model_max_probability_difference_on_source_data": 0.0,
+  "mcnemar_p_values": [
+    0.40737768305675337,
+    0.05274632203096378,
+    0.21049770005533391,
+    0.9266523854568796,
+    0.7768140041554821
+  ],
+  "mcnemar_holm_p_values": [
+    1.0,
+    0.2637316101548189,
+    0.8419908002213357,
+    1.0,
+    1.0
+  ]
+}
