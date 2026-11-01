@@ -98,33 +98,35 @@ Kaydedilen `p1_hat.joblib`, **2.1 bölümündeki varsayılan parametreli** Grady
 
 ## 6. Depo yapısı ve dosyalar
 
-GitHub'ın `main` dalındaki **gerçek dosya yerleşimi** şöyledir (dosyalar `proje1/` alt klasöründe değil, deponun ana dizinindedir):
+Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 
 ```text
 .
-├── BIL545_Proje1_Grup01.ipynb
 ├── README.md
-├── p1_hat.joblib
-├── p1_meta.json
-└── p1_model_tum_veri.joblib
+├── proje1/
+│   ├── BIL545_Proje1_Grup01.ipynb
+│   ├── p1_hat.joblib
+│   ├── p1_meta.json
+│   └── p1_model_tum_veri.joblib
+└── proje2/                      (final teslimiyle eklenecek)
 ```
 
 | Dosya | Açıklama |
 |---|---|
-| [`BIL545_Proje1_Grup01.ipynb`](./BIL545_Proje1_Grup01.ipynb) | Proje 1'in kodları, çalıştırma çıktıları, grafikler, okuma notları, yorumlar, Weka karşılaştırmaları ve beyanları |
-| [`p1_hat.joblib`](./p1_hat.joblib) | 2.5'te oluşturulan **henüz eğitilmemiş** ön işleme + Gradyan Artırma `Pipeline`'ı; Proje 2'de ilgili veri üzerinde yeniden eğitilmek üzere |
-| [`p1_model_tum_veri.joblib`](./p1_model_tum_veri.joblib) | Aynı hattın **tüm veriyle eğitilmiş** örneği; yalnızca açıklama/inceleme amacıyla; çapraz doğrulama başarımının kanıtı veya bağımsız test modeli değildir |
-| [`p1_meta.json`](./p1_meta.json) | Tohum, özellik listeleri, dışlanan sütunlar, seçilen model, 5×5 CV protokolü, ROC AUC özeti ve scikit-learn sürümü |
+| [`proje1/BIL545_Proje1_Grup01.ipynb`](./proje1/BIL545_Proje1_Grup01.ipynb) | Proje 1'in kodları, çalıştırma çıktıları, grafikler, okuma notları, yorumlar, Weka karşılaştırmaları ve beyanları |
+| [`proje1/p1_hat.joblib`](./proje1/p1_hat.joblib) | 2.5'te oluşturulan **henüz eğitilmemiş** ön işleme + Gradyan Artırma `Pipeline`'ı; Proje 2'de ilgili veri üzerinde yeniden eğitilmek üzere |
+| [`proje1/p1_model_tum_veri.joblib`](./proje1/p1_model_tum_veri.joblib) | Aynı hattın **tüm veriyle eğitilmiş** örneği; yalnızca açıklama/inceleme amacıyla; çapraz doğrulama başarımının kanıtı veya bağımsız test modeli değildir |
+| [`proje1/p1_meta.json`](./proje1/p1_meta.json) | Tohum, özellik listeleri, dışlanan sütunlar, seçilen model, 5×5 CV protokolü, ROC AUC özeti ve scikit-learn sürümü |
 
 `p1_meta.json` içindeki `cv_roc_auc_ort=0.8593316162707018`, `cv_roc_auc_std=0.008677503913869976`, `seed=42` ve `sklearn_surumu=1.6.1` değerleri notebook'un 2.5 bölümünde kaydedilen bilgilerle tutarlıdır. Model dosyaları aynı bölümde `joblib.dump` aracılığıyla üretilir.
 
 **Veri paylaşımı:** `Churn_Modelling.csv`, `p1_temiz_veri.csv` ve müşteri düzeyinde `CustomerId`, `y_true`, `oof_proba` içeren `p1_oof.csv` dosyaları genel erişime açık GitHub deposuna yüklenmez. Proje 2'de ihtiyaç duyulursa kısıtlı erişimli bir ortamda tutulur. `joblib`/pickle model dosyaları yalnızca güvenilen kaynaktan yüklenmelidir; ayrıca scikit-learn sürümleri farklıysa yeniden üretmek tercih edilmelidir.
 
-**Not:** Notebook'un 2.5 hücresinde önceki klasör planından kalma `proje1/` yükleme yönlendirmesi görüntülenebilir. Mevcut GitHub deposunda geçerli yol **ana dizindir**. Proje 2 (final) henüz bu depoda bulunmamaktadır.
+**Not:** Notebook'un 2.5 hücresindeki "dosyaları `proje1/` klasörüne koyun" yönlendirmesi bu yerleşimle uyumludur. Proje 2 (final) henüz bu depoda bulunmamaktadır; teslim edildiğinde `proje2/` klasörüne eklenecektir.
 
 ## 7. Google Colab'da çalıştırma
 
-**[Proje 1 notebook'unu Colab'da aç](https://colab.research.google.com/github/gulsenmurat/proje1/blob/main/BIL545_Proje1_Grup01.ipynb)**
+**[Proje 1 notebook'unu Colab'da aç](https://colab.research.google.com/github/gulsenmurat/proje1/blob/main/proje1/BIL545_Proje1_Grup01.ipynb)**
 
 1. [Kaggle veri kümesini](https://www.kaggle.com/datasets/aakash50897/churn-modellingcsv) indirin; dosya adı `Churn_Modelling.csv` olmalıdır.
 2. Notebook'u Colab'da açın. Hazırlık hücresindeki `!pip install -q --no-deps mlxtend==0.25.0` komutunu çalıştırın. Kurulum mevcut oturumdaki paketi değiştirdiyse **Çalışma Zamanı → Oturumu yeniden başlat** seçeneğini kullanın.
