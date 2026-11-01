@@ -165,6 +165,7 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 ## 11. Yapay zekâ kullanım beyanı
 
 - **ChatGPT (OpenAI):** Python ve Colab kodlarının hatalarının giderilmesi ve dosya kontrolünde kullanılmıştır.
+- **Claude (Anthropic):** Proje 1 defterinin ve README'nin ders yönergesine göre gözden geçirilmesinde, deponun `proje1/` klasör yapısına taşınmasında ve README güncellemelerinin hazırlanmasında kullanılmıştır. Önerilen değişiklikler grup üyesi tarafından kontrol edilip onaylanmıştır.
 
 
 ## 12. Kaynaklar
