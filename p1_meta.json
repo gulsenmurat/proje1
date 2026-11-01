@@ -1,0 +1,43 @@
+{
+  "seed": 42,
+  "hedef": "Exited",
+  "ozellikler": [
+    "CreditScore",
+    "Age",
+    "Tenure",
+    "Balance",
+    "NumOfProducts",
+    "EstimatedSalary",
+    "HasCrCard",
+    "IsActiveMember",
+    "Geography",
+    "Gender"
+  ],
+  "sayisal": [
+    "CreditScore",
+    "Age",
+    "Tenure",
+    "Balance",
+    "NumOfProducts",
+    "EstimatedSalary"
+  ],
+  "ikili": [
+    "HasCrCard",
+    "IsActiveMember"
+  ],
+  "kategorik": [
+    "Geography",
+    "Gender"
+  ],
+  "dislanan": [
+    "RowNumber",
+    "CustomerId",
+    "Surname"
+  ],
+  "secilen_model": "Gradyan artırma",
+  "cv_protokolu": "RepeatedStratifiedKFold(5 kat, 5 tekrar)",
+  "ana_olcut": "roc_auc",
+  "cv_roc_auc_ort": 0.8593316162707018,
+  "cv_roc_auc_std": 0.008677503913869976,
+  "sklearn_surumu": "1.6.1"
+}
