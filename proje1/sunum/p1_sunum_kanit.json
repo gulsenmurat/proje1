@@ -1,0 +1,699 @@
+{
+  "veri_sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0",
+  "sutunlar": [
+    "RowNumber",
+    "CustomerId",
+    "Surname",
+    "CreditScore",
+    "Geography",
+    "Gender",
+    "Age",
+    "Tenure",
+    "Balance",
+    "NumOfProducts",
+    "HasCrCard",
+    "IsActiveMember",
+    "EstimatedSalary",
+    "Exited"
+  ],
+  "kod_kaynagi": "BIL545_Proje1_Grup01.ipynb 3.1–3.4",
+  "weka_kod_sha256": "d635c8b2cae52f7dac16a34fa61b1d90bbd1513b6bb24727f8a104950f65b887",
+  "genel": {
+    "musteri": 10000,
+    "ayrilan": 2037,
+    "oran": 0.2037
+  },
+  "kup_30_hucre": [
+    {
+      "ulke": "France",
+      "cinsiyet": "Female",
+      "yas": "18–29",
+      "musteri": 398,
+      "ayrilan": 23,
+      "oran": 0.05778894472361809
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Female",
+      "yas": "30–39",
+      "musteri": 977,
+      "ayrilan": 107,
+      "oran": 0.10951893551688843
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Female",
+      "yas": "40–49",
+      "musteri": 580,
+      "ayrilan": 181,
+      "oran": 0.3120689655172414
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Female",
+      "yas": "50–59",
+      "musteri": 174,
+      "ayrilan": 107,
+      "oran": 0.6149425287356322
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Female",
+      "yas": "60+",
+      "musteri": 132,
+      "ayrilan": 42,
+      "oran": 0.3181818181818182
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Male",
+      "yas": "18–29",
+      "musteri": 468,
+      "ayrilan": 22,
+      "oran": 0.04700854700854701
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Male",
+      "yas": "30–39",
+      "musteri": 1273,
+      "ayrilan": 76,
+      "oran": 0.05970149253731343
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Male",
+      "yas": "40–49",
+      "musteri": 662,
+      "ayrilan": 136,
+      "oran": 0.2054380664652568
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Male",
+      "yas": "50–59",
+      "musteri": 208,
+      "ayrilan": 90,
+      "oran": 0.4326923076923077
+    },
+    {
+      "ulke": "France",
+      "cinsiyet": "Male",
+      "yas": "60+",
+      "musteri": 142,
+      "ayrilan": 26,
+      "oran": 0.18309859154929578
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Female",
+      "yas": "18–29",
+      "musteri": 171,
+      "ayrilan": 29,
+      "oran": 0.1695906432748538
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Female",
+      "yas": "30–39",
+      "musteri": 455,
+      "ayrilan": 109,
+      "oran": 0.23956043956043957
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Female",
+      "yas": "40–49",
+      "musteri": 368,
+      "ayrilan": 177,
+      "oran": 0.48097826086956524
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Female",
+      "yas": "50–59",
+      "musteri": 141,
+      "ayrilan": 103,
+      "oran": 0.7304964539007093
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Female",
+      "yas": "60+",
+      "musteri": 58,
+      "ayrilan": 30,
+      "oran": 0.5172413793103449
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Male",
+      "yas": "18–29",
+      "musteri": 201,
+      "ayrilan": 18,
+      "oran": 0.08955223880597014
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Male",
+      "yas": "30–39",
+      "musteri": 542,
+      "ayrilan": 79,
+      "oran": 0.14575645756457564
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Male",
+      "yas": "40–49",
+      "musteri": 372,
+      "ayrilan": 157,
+      "oran": 0.4220430107526882
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Male",
+      "yas": "50–59",
+      "musteri": 136,
+      "ayrilan": 91,
+      "oran": 0.6691176470588235
+    },
+    {
+      "ulke": "Germany",
+      "cinsiyet": "Male",
+      "yas": "60+",
+      "musteri": 65,
+      "ayrilan": 21,
+      "oran": 0.3230769230769231
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Female",
+      "yas": "18–29",
+      "musteri": 181,
+      "ayrilan": 22,
+      "oran": 0.12154696132596685
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Female",
+      "yas": "30–39",
+      "musteri": 452,
+      "ayrilan": 52,
+      "oran": 0.11504424778761062
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Female",
+      "yas": "40–49",
+      "musteri": 299,
+      "ayrilan": 92,
+      "oran": 0.3076923076923077
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Female",
+      "yas": "50–59",
+      "musteri": 106,
+      "ayrilan": 55,
+      "oran": 0.5188679245283019
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Female",
+      "yas": "60+",
+      "musteri": 51,
+      "ayrilan": 10,
+      "oran": 0.19607843137254902
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Male",
+      "yas": "18–29",
+      "musteri": 222,
+      "ayrilan": 10,
+      "oran": 0.04504504504504504
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Male",
+      "yas": "30–39",
+      "musteri": 647,
+      "ayrilan": 50,
+      "oran": 0.07727975270479134
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Male",
+      "yas": "40–49",
+      "musteri": 337,
+      "ayrilan": 63,
+      "oran": 0.18694362017804153
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Male",
+      "yas": "50–59",
+      "musteri": 104,
+      "ayrilan": 41,
+      "oran": 0.3942307692307692
+    },
+    {
+      "ulke": "Spain",
+      "cinsiyet": "Male",
+      "yas": "60+",
+      "musteri": 78,
+      "ayrilan": 18,
+      "oran": 0.23076923076923078
+    }
+  ],
+  "ulke_yas": [
+    {
+      "ulke": "France",
+      "yas": "18–29",
+      "musteri": 866,
+      "ayrilan": 45,
+      "oran": 0.05196304849884527
+    },
+    {
+      "ulke": "France",
+      "yas": "30–39",
+      "musteri": 2250,
+      "ayrilan": 183,
+      "oran": 0.08133333333333333
+    },
+    {
+      "ulke": "France",
+      "yas": "40–49",
+      "musteri": 1242,
+      "ayrilan": 317,
+      "oran": 0.25523349436392917
+    },
+    {
+      "ulke": "France",
+      "yas": "50–59",
+      "musteri": 382,
+      "ayrilan": 197,
+      "oran": 0.5157068062827225
+    },
+    {
+      "ulke": "France",
+      "yas": "60+",
+      "musteri": 274,
+      "ayrilan": 68,
+      "oran": 0.24817518248175183
+    },
+    {
+      "ulke": "Germany",
+      "yas": "18–29",
+      "musteri": 372,
+      "ayrilan": 47,
+      "oran": 0.12634408602150538
+    },
+    {
+      "ulke": "Germany",
+      "yas": "30–39",
+      "musteri": 997,
+      "ayrilan": 188,
+      "oran": 0.18856569709127383
+    },
+    {
+      "ulke": "Germany",
+      "yas": "40–49",
+      "musteri": 740,
+      "ayrilan": 334,
+      "oran": 0.45135135135135135
+    },
+    {
+      "ulke": "Germany",
+      "yas": "50–59",
+      "musteri": 277,
+      "ayrilan": 194,
+      "oran": 0.7003610108303249
+    },
+    {
+      "ulke": "Germany",
+      "yas": "60+",
+      "musteri": 123,
+      "ayrilan": 51,
+      "oran": 0.4146341463414634
+    },
+    {
+      "ulke": "Spain",
+      "yas": "18–29",
+      "musteri": 403,
+      "ayrilan": 32,
+      "oran": 0.0794044665012407
+    },
+    {
+      "ulke": "Spain",
+      "yas": "30–39",
+      "musteri": 1099,
+      "ayrilan": 102,
+      "oran": 0.09281164695177434
+    },
+    {
+      "ulke": "Spain",
+      "yas": "40–49",
+      "musteri": 636,
+      "ayrilan": 155,
+      "oran": 0.24371069182389937
+    },
+    {
+      "ulke": "Spain",
+      "yas": "50–59",
+      "musteri": 210,
+      "ayrilan": 96,
+      "oran": 0.45714285714285713
+    },
+    {
+      "ulke": "Spain",
+      "yas": "60+",
+      "musteri": 129,
+      "ayrilan": 28,
+      "oran": 0.21705426356589147
+    }
+  ],
+  "yas": [
+    {
+      "yas": "18–29",
+      "musteri": 1641,
+      "ayrilan": 124,
+      "oran": 0.07556368068251067
+    },
+    {
+      "yas": "30–39",
+      "musteri": 4346,
+      "ayrilan": 473,
+      "oran": 0.10883571099861943
+    },
+    {
+      "yas": "40–49",
+      "musteri": 2618,
+      "ayrilan": 806,
+      "oran": 0.30786860198624905
+    },
+    {
+      "yas": "50–59",
+      "musteri": 869,
+      "ayrilan": 487,
+      "oran": 0.5604142692750288
+    },
+    {
+      "yas": "60+",
+      "musteri": 526,
+      "ayrilan": 147,
+      "oran": 0.279467680608365
+    }
+  ],
+  "ulke": [
+    {
+      "ulke": "France",
+      "musteri": 5014,
+      "ayrilan": 810,
+      "oran": 0.16154766653370561
+    },
+    {
+      "ulke": "Germany",
+      "musteri": 2509,
+      "ayrilan": 814,
+      "oran": 0.32443204463929853
+    },
+    {
+      "ulke": "Spain",
+      "musteri": 2477,
+      "ayrilan": 413,
+      "oran": 0.1667339523617279
+    }
+  ],
+  "aktiflik": [
+    {
+      "aktiflik": "Aktif",
+      "musteri": 5151,
+      "ayrilan": 735,
+      "oran": 0.14269073966220153
+    },
+    {
+      "aktiflik": "Pasif",
+      "musteri": 4849,
+      "ayrilan": 1302,
+      "oran": 0.26850897092183956
+    }
+  ],
+  "cinsiyet": [
+    {
+      "cinsiyet": "Female",
+      "musteri": 4543,
+      "ayrilan": 1139,
+      "oran": 0.2507153863086066
+    },
+    {
+      "cinsiyet": "Male",
+      "musteri": 5457,
+      "ayrilan": 898,
+      "oran": 0.16455928165658787
+    }
+  ],
+  "almanya_cinsiyet_yas": [
+    {
+      "cinsiyet": "Female",
+      "yas": "18–29",
+      "musteri": 171,
+      "ayrilan": 29,
+      "oran": 0.1695906432748538
+    },
+    {
+      "cinsiyet": "Female",
+      "yas": "30–39",
+      "musteri": 455,
+      "ayrilan": 109,
+      "oran": 0.23956043956043957
+    },
+    {
+      "cinsiyet": "Female",
+      "yas": "40–49",
+      "musteri": 368,
+      "ayrilan": 177,
+      "oran": 0.48097826086956524
+    },
+    {
+      "cinsiyet": "Female",
+      "yas": "50–59",
+      "musteri": 141,
+      "ayrilan": 103,
+      "oran": 0.7304964539007093
+    },
+    {
+      "cinsiyet": "Female",
+      "yas": "60+",
+      "musteri": 58,
+      "ayrilan": 30,
+      "oran": 0.5172413793103449
+    },
+    {
+      "cinsiyet": "Male",
+      "yas": "18–29",
+      "musteri": 201,
+      "ayrilan": 18,
+      "oran": 0.08955223880597014
+    },
+    {
+      "cinsiyet": "Male",
+      "yas": "30–39",
+      "musteri": 542,
+      "ayrilan": 79,
+      "oran": 0.14575645756457564
+    },
+    {
+      "cinsiyet": "Male",
+      "yas": "40–49",
+      "musteri": 372,
+      "ayrilan": 157,
+      "oran": 0.4220430107526882
+    },
+    {
+      "cinsiyet": "Male",
+      "yas": "50–59",
+      "musteri": 136,
+      "ayrilan": 91,
+      "oran": 0.6691176470588235
+    },
+    {
+      "cinsiyet": "Male",
+      "yas": "60+",
+      "musteri": 65,
+      "ayrilan": 21,
+      "oran": 0.3230769230769231
+    }
+  ],
+  "simpson_taramasi": [
+    {
+      "ikili": "cinsiyet",
+      "katman": "ulke",
+      "fark_tanimi": "Male − Female",
+      "toplam_fark": -0.08615610465201876,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "cinsiyet",
+      "katman": "yas",
+      "fark_tanimi": "Male − Female",
+      "toplam_fark": -0.08615610465201876,
+      "ters_katmanlar": [],
+      "katman_sayisi": 5,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "cinsiyet",
+      "katman": "urun",
+      "fark_tanimi": "Male − Female",
+      "toplam_fark": -0.08615610465201876,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "aktiflik",
+      "katman": "ulke",
+      "fark_tanimi": "Pasif − Aktif",
+      "toplam_fark": 0.12581823125963804,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "aktiflik",
+      "katman": "yas",
+      "fark_tanimi": "Pasif − Aktif",
+      "toplam_fark": 0.12581823125963804,
+      "ters_katmanlar": [],
+      "katman_sayisi": 5,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "aktiflik",
+      "katman": "urun",
+      "fark_tanimi": "Pasif − Aktif",
+      "toplam_fark": 0.12581823125963804,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "bakiye",
+      "katman": "ulke",
+      "fark_tanimi": "Sifir − Bakiyeli",
+      "toplam_fark": -0.10255975674256737,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "bakiye",
+      "katman": "yas",
+      "fark_tanimi": "Sifir − Bakiyeli",
+      "toplam_fark": -0.10255975674256737,
+      "ters_katmanlar": [],
+      "katman_sayisi": 5,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "bakiye",
+      "katman": "urun",
+      "fark_tanimi": "Sifir − Bakiyeli",
+      "toplam_fark": -0.10255975674256737,
+      "ters_katmanlar": [
+        "1"
+      ],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "kart",
+      "katman": "ulke",
+      "fark_tanimi": "1 − 0",
+      "toplam_fark": -0.006306740995741661,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "kart",
+      "katman": "yas",
+      "fark_tanimi": "1 − 0",
+      "toplam_fark": -0.006306740995741661,
+      "ters_katmanlar": [
+        "18–29",
+        "30–39",
+        "40–49"
+      ],
+      "katman_sayisi": 5,
+      "tum_katmanlarda_ters": false
+    },
+    {
+      "ikili": "kart",
+      "katman": "urun",
+      "fark_tanimi": "1 − 0",
+      "toplam_fark": -0.006306740995741661,
+      "ters_katmanlar": [],
+      "katman_sayisi": 3,
+      "tum_katmanlarda_ters": false
+    }
+  ],
+  "uc_kural": [
+    {
+      "profil": "50–59 pasif tek ürün",
+      "kural": "Aktiflik=pasif & Urun=1 & Yas=50_59",
+      "oncul": 251,
+      "ayrilan": 218,
+      "lift_sira": 1.0,
+      "kulc_sira": 2.0,
+      "support": 0.0218,
+      "confidence": 0.8685258964143426,
+      "lift": 4.263750105126866,
+      "kulc": 0.48777301202651346,
+      "IR": 0.8628019323671497,
+      "hedef_kapsama": 0.10702012763868433
+    },
+    {
+      "profil": "3+ ürün",
+      "kural": "Urun=3_ve_uzeri",
+      "oncul": 326,
+      "ayrilan": 280,
+      "lift_sira": 2.0,
+      "kulc_sira": 1.0,
+      "support": 0.028,
+      "confidence": 0.8588957055214724,
+      "lift": 4.21647376299201,
+      "kulc": 0.498176375097506,
+      "IR": 0.8214114258281325,
+      "hedef_kapsama": 0.13745704467353953
+    },
+    {
+      "profil": "50–59 pasif",
+      "kural": "Aktiflik=pasif & Yas=50_59",
+      "oncul": 373,
+      "ayrilan": 303,
+      "lift_sira": 3.0,
+      "kulc_sira": 3.0,
+      "support": 0.0303,
+      "confidence": 0.8123324396782842,
+      "lift": 3.9878863018079733,
+      "kulc": 0.4805402993678608,
+      "IR": 0.7897484575225439,
+      "hedef_kapsama": 0.1487481590574374
+    }
+  ],
+  "weka": {
+    "toplam_kural": 4731,
+    "hedef_kural": 132,
+    "python_hedef_kural": 116,
+    "ortak": 116,
+    "yalniz_python": 0,
+    "yalniz_weka": 16,
+    "ek_kurallarin_oncul_oge_sayisi": 4,
+    "maks_guven_farki": 1.1102230246251565e-16,
+    "maks_lift_farki": 8.881784197001252e-16,
+    "kapsam": "Kayıtlı Weka 3.8.7 Apriori çıktısı ayrıştırıldı; masaüstü deneyi yeniden çalıştırılmadı."
+  }
+}

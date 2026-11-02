@@ -215,5 +215,26 @@
       "status": "passed"
     }
   ],
-  "dependency_installation_note": "Pinned scientific packages; mlxtend 0.25.0 installed with --no-deps because its package metadata requires sklearn>=1.8.0 while stored models use sklearn 1.6.1. The used FP-Growth function passed; full mlxtend API compatibility is not claimed. Notebook installation commands were not executed inside the validation process (dependencies preprovisioned)."
+  "dependency_installation_note": "Pinned scientific packages; mlxtend 0.25.0 installed with --no-deps because its package metadata requires sklearn>=1.8.0 while stored models use sklearn 1.6.1. The used FP-Growth function passed; full mlxtend API compatibility is not claimed. Notebook installation commands were not executed inside the validation process (dependencies preprovisioned).",
+  "presentation_update": {
+    "slide_numbers": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "code_sections": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4"
+    ],
+    "evidence": "sunum/p1_sunum_kanit.json",
+    "reproduction_script": "sunum/sunum_kanitlarini_uret.py",
+    "verified_cube_cells": 30,
+    "verified_raw_profiles": 3,
+    "matched_weka_target_rules": 116,
+    "notebook_computational_cells_unchanged": true,
+    "scope": "Same raw CSV SHA-256 verified; aggregate counts regenerated with Python standard library; saved Weka output parsed, desktop not rerun. Four-slide individual section, not the full 20-slide group deck."
+  }
 }
