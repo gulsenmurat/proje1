@@ -32,7 +32,7 @@
 |---|---|
 | **Veri kümesi** | Bank Customer Churn / `Churn_Modelling.csv` |
 | **Kaynak** | [Aakash Aggrawal — Kaggle veri kümesi](https://www.kaggle.com/datasets/aakash50897/churn-modellingcsv) |
-| **Erişim tarihi** | 10 Ekim 2026 |
+| **Erişim tarihi** | İlk erişim: 10 Ekim 2026; kaynak dosyasının yeniden indirilip doğrulanması: 2 Kasım 2026 |
 | **Lisans** | **Unknown / belirtilmemiş.** Açık yeniden dağıtım izni varsayılmaz. |
 | **Boyut** | **10.000 müşteri × 14 sütun** |
 | **Hedef** | `Exited`: **1 = bankadan ayrıldı**, **0 = bankada kaldı** |
@@ -42,7 +42,7 @@
 
 **Veri dosyası bu GitHub deposunda yayımlanmamaktadır.** Projeyi çalıştırmak için Kaggle bağlantısından `Churn_Modelling.csv` dosyasını indirin. Google Colab defteri dosyayı ilk veri yükleme hücresinde sizden ister. `CustomerId` yalnızca gerekli satır eşleştirmelerinde tutulur; tahmin özelliği olarak kullanılmaz.
 
-Verinin toplanma zamanı, ilk üreticisi ve örneklemin temsiliyeti yeterince belgelenmediğinden sonuçların bütün banka müşterilerine genellenebileceği varsayılmaz.
+Verinin toplanma zamanı, ilk üreticisi ve örneklemin temsiliyeti yeterince belgelenmediğinden sonuçların bütün banka müşterilerine genellenebileceği varsayılmaz. Ders yönergesindeki bilinen ve akademik yeniden paylaşıma izin veren lisans koşulu, kaynağın **Unknown** lisansıyla doğrulanamamaktadır; bu koşulun sağlandığı iddia edilmez.
 
 ## 4. Proje 1 kapsamı
 
@@ -70,7 +70,7 @@ Aşağıdaki sonuçlar, 5 katlı ve 5 tekrarlı çapraz doğrulamadaki **ROC AUC
 | Rastgele Orman | 0,859 ± 0,008 | 0,574 | 0,688 |
 | **Gradyan Artırma (seçilen)** | **0,859 ± 0,009** | **0,594** | **0,698** |
 
-**Nihai tercih:** Gradyan Artırma (*HistGradientBoostingClassifier*). ROC AUC bakımından Rastgele Orman'a çok yakınken F1, Average Precision ve Balanced Accuracy (0,726) açısından daha iyi sonuç vermiştir. **Bu fark istatistiksel olarak kanıtlanmış bir üstünlük değildir:** 5×2cv t-testinde `p = 0,6352` (1 Kasım 2026 hedefli yeniden çalıştırma) elde edilmiştir.
+**Nihai tercih:** Gradyan Artırma (*HistGradientBoostingClassifier*). ROC AUC bakımından Rastgele Orman'a çok yakınken F1, Average Precision ve Balanced Accuracy (0,726) açısından daha iyi sonuç vermiştir. **Bu fark istatistiksel olarak kanıtlanmış bir üstünlük değildir:** 5×2cv t-testinde `p = 0,6352` (2 Kasım 2026 sıralı yeniden çalıştırma) elde edilmiştir.
 
 Kaydedilen `p1_hat.joblib`, **2.1 bölümündeki varsayılan parametreli** Gradyan Artırma hattıdır; 2.3'te yapılan optimizasyonun sonucu değildir. GridSearchCV için 0,8666 ve iç içe çapraz doğrulama için yaklaşık 0,866 ± 0,007 ROC AUC ayrıca raporlanmıştır.
 
@@ -109,7 +109,10 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 │   ├── p1_meta.json
 │   ├── p1_model_tum_veri.joblib
 │   ├── p1_kural_kanit.csv
-│   └── alp_dogrulama.json
+│   ├── alp_dogrulama.json
+│   └── sunum/
+│       ├── Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.pptx
+│       └── Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.docx
 └── proje2/                      (final teslimiyle eklenecek)
 ```
 
@@ -118,7 +121,11 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 | [`proje1/BIL545_Proje1_Grup01.ipynb`](./proje1/BIL545_Proje1_Grup01.ipynb) | Proje 1'in kodları, çalıştırma çıktıları, grafikler, okuma notları, yorumlar, Weka karşılaştırmaları ve beyanları |
 | [`proje1/p1_hat.joblib`](./proje1/p1_hat.joblib) | 2.5'te oluşturulan **henüz eğitilmemiş** ön işleme + Gradyan Artırma `Pipeline`'ı; Proje 2'de ilgili veri üzerinde yeniden eğitilmek üzere |
 | [`proje1/p1_model_tum_veri.joblib`](./proje1/p1_model_tum_veri.joblib) | Aynı hattın **tüm veriyle eğitilmiş** örneği; yalnızca açıklama/inceleme amacıyla; çapraz doğrulama başarımının kanıtı veya bağımsız test modeli değildir |
-| [`proje1/p1_meta.json`](./proje1/p1_meta.json) | Tohum, özellik listeleri, dışlanan sütunlar, seçilen model, 5×5 CV protokolü, ROC AUC özeti ve scikit-learn sürümü |
+| [`proje1/p1_meta.json`](./proje1/p1_meta.json) | Tohum, özellikler, dışlanan sütunlar, seçilen model ve parametreleri, CV/OOF protokolleri, ROC AUC özeti, veri SHA-256 özeti ve çalışma sürümleri |
+| [`proje1/p1_kural_kanit.csv`](./proje1/p1_kural_kanit.csv) | 116 hedef kuralı için toplulaştırılmış müşteri sayıları, ölçütler ve hedef kapsama oranı |
+| [`proje1/alp_dogrulama.json`](./proje1/alp_dogrulama.json) | Sıralı çalıştırılan 28 kod hücresinin kontrol kaydı ve kapsamı |
+| [`PowerPoint sunumu`](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.pptx) | Kullanıcının dokuz slaytlık tasarımının kod çıktılarıyla düzeltilmiş sürümü |
+| [`Word sunumu ve konuşma notları`](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.docx) | Slayt görselleri, düzenlenebilir metin, yaklaşık 3–4 dakikalık konuşma notları ve hesap/kaynak sayfası |
 
 `p1_meta.json` içindeki `cv_roc_auc_ort=0.8593316162707018`, `cv_roc_auc_std=0.008677503913869976`, `seed=42` ve `sklearn_surumu=1.6.1` değerleri notebook'un 2.5 bölümünde kaydedilen bilgilerle tutarlıdır. Model dosyaları aynı bölümde `joblib.dump` aracılığıyla üretilir.
 
@@ -131,18 +138,18 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 **[Proje 1 notebook'unu Colab'da aç](https://colab.research.google.com/github/gulsenmurat/proje1/blob/main/proje1/BIL545_Proje1_Grup01.ipynb)**
 
 1. [Kaggle veri kümesini](https://www.kaggle.com/datasets/aakash50897/churn-modellingcsv) indirin; dosya adı `Churn_Modelling.csv` olmalıdır.
-2. Notebook'u Colab'da açın. Hazırlık hücresindeki `!pip install -q --no-deps mlxtend==0.25.0` komutunu çalıştırın. Kurulum mevcut oturumdaki paketi değiştirdiyse **Çalışma Zamanı → Oturumu yeniden başlat** seçeneğini kullanın.
+2. Notebook'u Colab'da açın. Hazırlık hücresindeki iki kurulum komutunu sırayla çalıştırın. İlk komut doğrulamada kullanılan NumPy, pandas, SciPy, scikit-learn, Matplotlib, joblib ve statsmodels sürümlerini kurar; ikinci komut `!pip install -q --no-deps mlxtend==0.25.0` şeklindedir. `mlxtend 0.25.0` paket metaverisi scikit-learn ≥1.8.0 istediğinden, kaydedilmiş modellerin 1.6.1 sürümünü korumak için otomatik bağımlılık yükseltmesi kapatılmıştır. Projede kullanılan FP-Growth işlevi bu sabitlenmiş ortamda çalıştırılarak doğrulanmıştır; mlxtend paketinin tüm işlevlerinin uyumlu olduğu iddia edilmez. Kurulum mevcut oturumdaki paketi değiştirdiyse **Çalışma Zamanı → Oturumu yeniden başlat** seçeneğini kullanın.
 3. **Çalışma Zamanı → Tümünü çalıştır** deyin; yükleme ekranında `Churn_Modelling.csv` dosyasını seçin.
 4. `mlxtend` sürümünün **0.25.0**, veri boyutunun **10.000 × 14**, sık öğe kümesi sayısının **7.927** ve yalnızca hedef kurallarının sayısının **116** olduğunu kontrol edin. Kod hücreleri, grafikler ve açıklama bölümleri tamamlandıktan sonra notebook'u kaydedin.
 5. Proje 2 için kullanılacak model ve meta veriyi yeniden üretmek gerektiğinde 2.5 hücresinin oluşturduğu dosyalardan uygun olanları indirin. Müşteri düzeyindeki veri/OOF CSV'lerini **açık depoya** yüklemeyin.
 
 **Çalıştırma kayıtlarının kapsamı:** Önceden kaydedilmiş Colab çıktılarında Python 3.13.18, NumPy 2.1.3, pandas 2.2.3, scikit-learn 1.6.1, SciPy 1.16.3, Matplotlib 3.10.0, mlxtend 0.25.0 ve statsmodels 0.15.0 yazmaktadır. Bu bilgi eski hücre çıktılarının kaydıdır; bütün defterin güncel ortamda yeniden çalıştırıldığı anlamına gelmez.
 
-**1 Kasım 2026 Alp bölümleri doğrulaması:** Ortak hazırlık, 2.1 model karşılaştırması, 2.4–2.5, 3.2–3.3 ve kayıtlı Weka çıktısını ayrıştıran 3.4 kodu taze bir Python sürecinde hatasız çalıştırıldı. Güncellenen beş kod hücresinin çıktıları yenilendi; diğer üyelerin hücre çıktıları korundu. Çalışma ortamı Python 3.13.9, NumPy 2.3.5, pandas 2.3.3, scikit-learn 1.6.1, SciPy 1.16.3, mlxtend 0.25.0, statsmodels 0.14.5'tir. Grafik gösterimi yerel denetimde Agg ile yapıldı. Ayrıntılı kapsam ve veri dosyasının SHA-256 özeti [`alp_dogrulama.json`](./proje1/alp_dogrulama.json) dosyasındadır. Bu hedefli kontrol, teslim öncesi sıfırlanmış Colab oturumunda bütün defteri çalıştırma adımının yerine geçmez.
+**2 Kasım 2026 sıralı çalıştırma:** Defterin **28 kod hücresinin tamamı**, bağımlılıkları önceden kurulmuş taze bir yerel IPython sürecinde, aynı kaynak CSV ile sırayla hatasız çalıştırıldı (169,4 saniye). Hazırlık ve Alp bölümlerindeki altı kod hücresinin çıktıları yenilendi; diğer üyelerin kaydedilmiş çıktıları korundu. Çalışma ortamı Python 3.13.9, NumPy 2.3.5, pandas 2.3.3, scikit-learn 1.6.1, SciPy 1.16.3, mlxtend 0.25.0, statsmodels 0.14.5 ve Matplotlib 3.10.6'dır. Grafik gösterimi Agg ile yapıldı. Hücre bazında durumlar, süreler ve veri dosyasının SHA-256 özeti [`alp_dogrulama.json`](./proje1/alp_dogrulama.json) dosyasındadır. Bu kayıt yerel çalıştırmanın kanıtıdır; Google Colab oturumunun veya Weka masaüstü deneylerinin yeniden çalıştırıldığı iddia edilmez. Teslim öncesi sıfırlanmış Colab oturumunda **Tümünü çalıştır** kontrolü ayrıca yapılmalıdır.
 
 - 5×2 testinde `t=-0,505`, `p=0,6352`, ortalama hata farkı `0,0016` bulundu. Eski kayıtta `p=0,8416` idi; anlamlı fark olmadığı kararı değişmedi. Beş McNemar bölmesi için Holm düzeltmesi eklendi; en küçük düzeltilmiş p-değeri `0,2637`.
 - 116 kuralın destek, güven, lift, Kulczynski ve IR değerleri müşteri maskelerinden bağımsız olarak yeniden hesaplanıp doğrulandı. Nadir kategori sıralaması ve null-invariance duyarlılık hesabı açıklandı. [`p1_kural_kanit.csv`](./proje1/p1_kural_kanit.csv) yalnızca toplulaştırılmış ölçütler ve sayılar içerir.
-- Her müşteri bir kez OOF test katında yer aldı; eğitim/test ayrılığı, olasılık aralığı ve dosya satır eşleştirmeleri kontrol edildi. `p1_hat.joblib` ve `p1_meta.json` yeniden üretilen dosyalarla birebir eşleşti. Mevcut eğitilmiş modelin tahminleri yeniden üretilen modelle kaynak veride karşılaştırıldı; sonuç doğrulama JSON'unda verildi. Üç mevcut model/meta dosyası korundu.
+- Her müşteri bir kez OOF test katında yer aldı; eğitim/test ayrılığı, olasılık aralığı ve dosya satır eşleştirmeleri kontrol edildi. Meta dosyasına ham veri özeti, model parametreleri, OOF protokolü ve çalışma sürümleri eklendi. Mevcut eğitilmiş modelin tahminleri yeniden üretilen modelle kaynak veride karşılaştırıldı; en büyük mutlak olasılık farkı **0,0** bulundu. İki mevcut model dosyası korundu.
 - Weka masaüstü deneyleri yeniden çalıştırılmadı. Kayıtlı Weka çıktısıyla 116 ortak kural yeniden eşleştirildi; güven ve lift farkı sıfır bulundu.
 
 
@@ -172,7 +179,7 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 | Alp Aydın Özçelik | 2.4–2.5, 3.2–3.3; istatistiksel testler, çıktıların derlenmesi, kaynaklar/teslim | 3.3 – Birliktelik Kuralları |
 | Melih Turgut | E1.2, E2.1–E2.3; OOB, öznitelik seçimi, kararlılık ve varsayım defteri | E2.2 – Kararlılık Seçimi |
 
-**Alp bireysel sunumu:** Bölüm 3.3 için hazırlanan 3–4 dakikalık Word konuşma metni ayrı olarak teslim edilir; depoda tutulmaz. Üç kuralın müşteri sayıları, ölçütlerin yorumu, modelle karşılaştırma ve sınırlılıklar ele alınır.
+**Alp bireysel sunumu:** Bölüm 3.3 için hazırlanan [PowerPoint](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.pptx) ve [Word](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.docx) sürümleri, kullanıcının son talebiyle depoya eklenmiştir. Word dosyası dokuz slaydın görsellerini ve düzenlenebilir metinlerini, birlikte yaklaşık 3–4 dakika süren konuşma notlarını ve hesap/kaynak sayfasını içerir. B seçeneğinin sütunlara dayanan gerekçesi, üç kuralın gerçek müşteri sayıları, ölçütlerin yorumu, modelle karşılaştırma ve sınırlılıklar ele alınır. Örneğin 50–59 yaş, pasif ve tek ürün profilinde 251 müşterinin 218'i ayrılmıştır: güven **%86,85**, destek **%2,18**, lift **4,2638**. Bu değerler `p1_kural_kanit.csv` ve notebook 3.3 ile eşleşir. Slaytlardaki ölçülmemiş nedenler ve kaynakta bulunmayan maliyet iddiaları çıkarılmıştır.
 
 ## 11. Yapay zekâ kullanım beyanı
 
@@ -181,6 +188,7 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 
 
 - **Codex (OpenAI), 1 Kasım 2026:** Alp Aydın Özçelik'in talebiyle 2.4–2.5 ve 3.2–3.3 kontrollerinin geliştirilmesi, gerçek veriyle hedefli çalıştırma, kural kanıt tablosu ve bireysel Word sunum metninin hazırlanmasında kullanıldı. Kullanıcı adına kaynakları okuduğu veya sözlü savunma yaptığı iddia edilmez.
+- **Codex (OpenAI), 2 Kasım 2026:** Alp'in aynı bölümlerindeki hesapların izlenebilirliğinin geliştirilmesi, tüm kod hücrelerinin yerel ortamda sıralı çalıştırılması, kullanıcı tarafından hazırlanan sunumun veri/kod çıktılarıyla düzeltilmesi ve Word dönüşümünde kullanıldı.
 
 ## 12. Kaynaklar
 

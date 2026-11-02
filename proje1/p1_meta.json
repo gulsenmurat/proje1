@@ -39,5 +39,44 @@
   "ana_olcut": "roc_auc",
   "cv_roc_auc_ort": 0.8593316162707018,
   "cv_roc_auc_std": 0.008677503913869976,
-  "sklearn_surumu": "1.6.1"
+  "sklearn_surumu": "1.6.1",
+  "python_surumu": "3.13.9",
+  "kutuphane_surumleri": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "sklearn": "1.6.1",
+    "mlxtend": "0.25.0",
+    "statsmodels": "0.14.5"
+  },
+  "veri_sha256": "3996cd1fa372e0db0cd9c0ebac35bbd4e8e3c65fb942bb010c826e7b1eeef0a0",
+  "veri_boyutu": [
+    10000,
+    14
+  ],
+  "oof_protokolu": "StratifiedKFold(5, shuffle=True, random_state=42)",
+  "karar_esigi": 0.5,
+  "model_ayarlari": {
+    "categorical_features": "from_dtype",
+    "class_weight": null,
+    "early_stopping": "auto",
+    "interaction_cst": null,
+    "l2_regularization": 0.0,
+    "learning_rate": 0.1,
+    "loss": "log_loss",
+    "max_bins": 255,
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_iter": 100,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "random_state": 42,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  }
 }
