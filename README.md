@@ -187,6 +187,14 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 
 Alt grup oranlarında kullanılan paydalar farklıdır: genel 50–59 yaş grubunda **487/869 = %56,04**, Almanya 50–59 yaş grubunda **194/277 = %70,04**; 50–59 yaş, pasif ve tek ürün profilinde **218/251 = %86,85** bulunmuştur. Kurallar ve alt grup oranları nedensellik kanıtı olarak sunulmaz. Toplulaştırılmış kural sayıları ve ölçütleri notebook'un 3.3 bölümünde ve [`p1_kural_kanit.csv`](./proje1/p1_kural_kanit.csv) dosyasında incelenebilir.
 
+### Sunum videosu ve slaytlar
+
+Grup sunumunun video kaydı ve 20 slaytlık sunum dosyası, boyutları nedeniyle bu depoda değil, Google Drive klasöründe tutulmaktadır:
+
+**[Proje 1 sunum videosu ve slaytlar (Google Drive)](https://drive.google.com/drive/folders/1nyofIef0s2Tg3YxaMAMDoGpMpqCpID7z?usp=drive_link)**
+
+Videoda her üye, yukarıdaki tabloda belirtilen slaytları kendisi anlatmaktadır. Slaytlardaki sayılar `proje1/BIL545_Proje1_Grup01.ipynb` defterinin kayıtlı çıktılarından alınmıştır.
+
 ## 11. Yapay zekâ kullanım beyanı
 
 - **ChatGPT (OpenAI):** Python ve Colab kodlarının hatalarının giderilmesi ve dosya kontrolünde kullanılmıştır.
