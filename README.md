@@ -189,7 +189,7 @@ Alt grup oranlarında kullanılan paydalar farklıdır: genel 50–59 yaş grubu
 
 ### Sunum videosu ve slaytlar
 
-Grup sunumunun video kaydı ve 20 slaytlık sunum dosyası, boyutları nedeniyle bu depoda değil, Google Drive klasöründe tutulmaktadır:
+Grup sunumunun video kaydı ve 25 slaytlık sunum dosyası, boyutları nedeniyle bu depoda değil, Google Drive klasöründe tutulmaktadır:
 
 **[Proje 1 sunum videosu ve slaytlar (Google Drive)](https://drive.google.com/drive/folders/1nyofIef0s2Tg3YxaMAMDoGpMpqCpID7z?usp=drive_link)**
 
