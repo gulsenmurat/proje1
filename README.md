@@ -213,6 +213,7 @@ Betik CSV'nin SHA-256 özetini `p1_meta.json` ile karşılaştırır; 30 küp h�
 - **Codex (OpenAI), 1 Kasım 2026:** Alp Aydın Özçelik'in talebiyle 2.4–2.5 ve 3.2–3.3 kontrollerinin geliştirilmesi, gerçek veriyle hedefli çalıştırma, kural kanıt tablosu ve bireysel Word sunum metninin hazırlanmasında kullanıldı. Kullanıcı adına kaynakları okuduğu veya sözlü savunma yaptığı iddia edilmez.
 - **Codex (OpenAI), 2 Kasım 2026:** Alp'in aynı bölümlerindeki hesapların izlenebilirliğinin geliştirilmesi, tüm kod hücrelerinin yerel ortamda sıralı çalıştırılması, kullanıcı tarafından hazırlanan sunumun veri/kod çıktılarıyla düzeltilmesi ve Word dönüşümünde kullanıldı.
 - **Codex (OpenAI), son sunum dağılımı güncellemesi:** Slayt 11–14 için 3.1–3.4 bulgularının derlenmesinde, ham CSV'den toplulaştırılmış küp ve profil sayımlarının yeniden kontrolünde, Weka eşleşmelerinin doğrulanmasında ve Word konuşma/soru-cevap metninin hazırlanmasında kullanıldı. Mevcut kod/analiz sahiplikleri korundu.
+- **Claude (Anthropic), Mesut İşsever, 26 Kasım 2026:** 2.1–2.3 ve E1.3 bölümlerinin ders yönergesine göre gözden geçirilmesinde, bu bölümlerin yorum taslaklarında, E1.3 hücresindeki küçük bir kod düzeltmesinde, defterin yerel ortamda doğrulama amacıyla çalıştırılmasında ve sunum konuşma notlarının taslağında kullanıldı. Bu bölümlerin analiz kodu ve sonuçları değişmedi; kayıtlı çıktılar korundu. Taslaklar grup üyesi tarafından kontrol edilip düzenlendi.
 
 ## 12. Kaynaklar
 
