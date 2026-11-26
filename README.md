@@ -109,12 +109,7 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 │   ├── p1_meta.json
 │   ├── p1_model_tum_veri.joblib
 │   ├── p1_kural_kanit.csv
-│   ├── alp_dogrulama.json
-│   └── sunum/
-│       ├── Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.pptx
-│       ├── Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.docx
-│       ├── p1_sunum_kanit.json
-│       └── sunum_kanitlarini_uret.py
+│   └── alp_dogrulama.json
 └── proje2/                      (final teslimiyle eklenecek)
 ```
 
@@ -126,10 +121,6 @@ Ders yönergesine uygun olarak her projenin dosyaları kendi klasöründedir:
 | [`proje1/p1_meta.json`](./proje1/p1_meta.json) | Tohum, özellikler, dışlanan sütunlar, seçilen model ve parametreleri, CV/OOF protokolleri, ROC AUC özeti, veri SHA-256 özeti ve çalışma sürümleri |
 | [`proje1/p1_kural_kanit.csv`](./proje1/p1_kural_kanit.csv) | 116 hedef kuralı için toplulaştırılmış müşteri sayıları, ölçütler ve hedef kapsama oranı |
 | [`proje1/alp_dogrulama.json`](./proje1/alp_dogrulama.json) | Sıralı çalıştırılan 28 kod hücresinin kontrol kaydı ve kapsamı |
-| [`PowerPoint sunumu`](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.pptx) | Son görev dağılımındaki **Slayt 11–14** için dört slaytlık Alp bölümü; düzenlenebilir tablolar ve konuşmacı notları |
-| [`Word sunumu ve konuşma notları`](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.docx) | Dört slaytın görselleri, yaklaşık 3–4 dakikalık düzenlenebilir konuşma metni, rakamların yorumu, yöntem gerekçeleri ve soru-cevap hazırlığı |
-| [`Sunum kanıtları`](./proje1/sunum/p1_sunum_kanit.json) | 30 küp hücresi, yaş/ülke/aktiflik özetleri, Simpson taraması, üç profil ve Weka eşleşmelerinin toplulaştırılmış sayıları |
-| [`Kanıtları yeniden üret`](./proje1/sunum/sunum_kanitlarini_uret.py) | Yalnızca Python standart kütüphanesiyle aynı ham CSV'den sayıları yeniden hesaplar ve kayıtlı Weka çıktısıyla 116 kuralı karşılaştırır |
 
 `p1_meta.json` içindeki `cv_roc_auc_ort=0.8593316162707018`, `cv_roc_auc_std=0.008677503913869976`, `seed=42` ve `sklearn_surumu=1.6.1` değerleri notebook'un 2.5 bölümünde kaydedilen bilgilerle tutarlıdır. Model dosyaları aynı bölümde `joblib.dump` aracılığıyla üretilir.
 
@@ -183,26 +174,18 @@ Proje 2 hazırlık aşamasındadır. Kapsamında kümeleme, aykırı gözlem ana
 | Alp Aydın Özçelik | 2.4–2.5, 3.2–3.3; istatistiksel testler, çıktıların derlenmesi, kaynaklar/teslim; 3.1–3.4 bulgularının sunuma derlenmesi | **Slayt 11–14 – Veri küpü, yaş/ülke/aktiflik, birliktelik kuralları ve Python–Weka** |
 | Melih Turgut | E1.2, E2.1–E2.3; OOB, öznitelik seçimi, kararlılık ve varsayım defteri | Slayt 15–17 – Öznitelik önemi ve seçimi |
 
-**Son sunum dağılımı:** Yukarıdaki sunum sütunu, Alp'in paylaştığı 20 slaytlık grup sunumu görev dağılımını yansıtır. Kod/analiz katkıları kendi sütununda korunmuştur. Slayt 18–20 genel sonuçlar, akademik kaynaklar ve kapanış için ortak kapsamdır. Depodaki Alp dosyası **yalnızca Slayt 11–14 için dört slaytlık bölümdür**; grubun tamamının 20 slaytlık ana dosyası olduğu iddia edilmez.
+**Son sunum dağılımı:** Yukarıdaki sunum sütunu, Alp'in paylaştığı 20 slaytlık grup sunumu görev dağılımını yansıtır. Kod/analiz katkıları kendi sütununda korunmuştur. Slayt 18–20 genel sonuçlar, akademik kaynaklar ve kapanış için ortak kapsamdır.
 
-**Alp bölümünün kapsamı:** [PowerPoint](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.pptx) ve [Word](./proje1/sunum/Alp_Aydin_Ozcelik_Banka_Musteri_Kaybi.docx) son dağılıma göre güncellendi:
+**Alp bölümünün kapsamı:** Murat Gülşen’in hazırladığı grup sunumundaki 11–14. slaytlar esas alınır:
 
 | Slayt | Anlatılacak konu | Defterdeki kaynak |
 |---|---|---|
-| 11 | Olgu ve üç boyut, 30 küp hücresi, ülke × yaş özeti, roll-up | 3.1 |
-| 12 | Ülke oranları, Almanya 50–59 yaş drill-down, aktiflik ve Simpson taraması | 3.1 |
-| 13 | B seçeneğinin gerekçesi, ayrıklaştırma, eşikler, üç kural ve ölçütlerin yorumu | 3.2–3.3 |
-| 14 | Python–Weka eşleşmesi, 16 ek kuralın nedeni, model önemleriyle örtüşme ve sınırlılıklar | 3.3–3.4 |
+| 11 | Veri küpü: olgu ve üç boyut, 30 küp hücresi, roll-up ve Almanya 50–59 yaş grubunda drill-down | 3.1 |
+| 12 | B seçeneğinin gerekçesi: müşteri kayıtlarının ayrıklaştırılması, 35 öğe, FP-Growth, %2 destek ve %30 güven eşikleri | 3.2–3.3 |
+| 13 | Birliktelik kuralları: 50–59 yaş, pasif üyelik ve tek ürün profilinde %86,9 güven, 4,264 lift ve %2,2 destek; ölçütlerin ve diğer örnek kuralların yorumu | 3.3 |
+| 14 | Python–Weka karşılaştırması: Python’da 116, Weka’da 132 hedef kuralı, 116 ortak kural ve uzunluk sınırından kaynaklanan 16 ek kural | 3.3–3.4 |
 
-Word'de dört konuşma metni toplam 380 kelimedir; yaklaşık 3–4 dakika için hazırlanmıştır. Son iki sayfa hesaplar, yöntem gerekçeleri ve soru-cevap hazırlığıdır. Örneğin genel 50–59 yaş grubunda **487/869 = %56,04**, Almanya 50–59 yaş grubunda **194/277 = %70,04**; 50–59 yaş, pasif ve tek ürün profilinde **218/251 = %86,85** bulunmuştur. Bu farklı paydalar sunumda açıkça ayrılır. Bütün rakamlar aynı kaynak CSV'deki sayımlara dayanır. Kurallar ve alt grup oranları nedensellik kanıtı olarak sunulmaz.
-
-Sunum kanıtlarını yeniden üretmek için depo kökünde çalıştırın (Python 3.10 veya üzeri, ek paket gerektirmez):
-
-```bash
-python proje1/sunum/sunum_kanitlarini_uret.py /dosyanin/yolu/Churn_Modelling.csv
-```
-
-Betik CSV'nin SHA-256 özetini `p1_meta.json` ile karşılaştırır; 30 küp hücresinin sayımlarını, üç profilin ham müşteri sayılarını ve ölçütlerini, ayrıca 116 ortak Weka kuralını doğrular. Yalnızca toplulaştırılmış JSON üretir. Weka masaüstü uygulamasını veya model eğitimini yeniden çalıştırmaz.
+Alt grup oranlarında kullanılan paydalar farklıdır: genel 50–59 yaş grubunda **487/869 = %56,04**, Almanya 50–59 yaş grubunda **194/277 = %70,04**; 50–59 yaş, pasif ve tek ürün profilinde **218/251 = %86,85** bulunmuştur. Kurallar ve alt grup oranları nedensellik kanıtı olarak sunulmaz. Toplulaştırılmış kural sayıları ve ölçütleri notebook'un 3.3 bölümünde ve [`p1_kural_kanit.csv`](./proje1/p1_kural_kanit.csv) dosyasında incelenebilir.
 
 ## 11. Yapay zekâ kullanım beyanı
 
@@ -231,3 +214,4 @@ Betik CSV'nin SHA-256 özetini `p1_meta.json` ile karşılaştırır; 30 küp h�
 - Pedregosa, F. ve diğerleri (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research*, 12, 2825–2830. https://www.jmlr.org/papers/v12/pedregosa11a.html
 - Raschka, S. (2018). MLxtend: Providing machine learning and data science utilities and extensions to Python's scientific computing stack. *Journal of Open Source Software*, 3(24), 638. https://doi.org/10.21105/joss.00638
 - Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P. ve Witten, I. H. (2009). The WEKA data mining software: An update. *ACM SIGKDD Explorations Newsletter*, 11(1), 10–18. https://doi.org/10.1145/1656274.1656278
+
