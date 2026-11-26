@@ -57,7 +57,7 @@
   "code_cell_count": 28,
   "execution_seconds": 169.4,
   "scope": "All code cells executed sequentially in a fresh local IPython process with preinstalled pinned dependencies; pip installation preprovisioned. Saved Weka outputs parsed, Weka desktop experiments not rerun. Only Alp section and setup outputs replaced; collaborator outputs preserved. Not a Google Colab execution.",
-  "existing_fitted_model_max_probability_difference_on_source_data": 0.0,
+  "existing_fitted_model_max_probability_difference_on_source_data": 0,
   "mcnemar_p_values": [
     0.40737768305675337,
     0.05274632203096378,
@@ -66,11 +66,11 @@
     0.7768140041554821
   ],
   "mcnemar_holm_p_values": [
-    1.0,
+    1,
     0.2637316101548189,
     0.8419908002213357,
-    1.0,
-    1.0
+    1,
+    1
   ],
   "customer_level_files_published": false,
   "cell_results": [
@@ -91,7 +91,7 @@
     },
     {
       "cell_index": 9,
-      "seconds": 0.0,
+      "seconds": 0,
       "status": "passed"
     },
     {
@@ -116,7 +116,7 @@
     },
     {
       "cell_index": 22,
-      "seconds": 0.0,
+      "seconds": 0,
       "status": "passed"
     },
     {
@@ -136,7 +136,7 @@
     },
     {
       "cell_index": 33,
-      "seconds": 0.0,
+      "seconds": 0,
       "status": "passed"
     },
     {
@@ -211,7 +211,7 @@
     },
     {
       "cell_index": 79,
-      "seconds": 0.0,
+      "seconds": 0,
       "status": "passed"
     }
   ],
@@ -229,12 +229,12 @@
       "3.3",
       "3.4"
     ],
-    "evidence": "sunum/p1_sunum_kanit.json",
-    "reproduction_script": "sunum/sunum_kanitlarini_uret.py",
     "verified_cube_cells": 30,
     "verified_raw_profiles": 3,
     "matched_weka_target_rules": 116,
     "notebook_computational_cells_unchanged": true,
-    "scope": "Same raw CSV SHA-256 verified; aggregate counts regenerated with Python standard library; saved Weka output parsed, desktop not rerun. Four-slide individual section, not the full 20-slide group deck."
+    "scope": "Same raw CSV SHA-256 verified; aggregate counts regenerated with Python standard library; saved Weka output parsed, desktop not rerun. Four-slide individual section, not the full 20-slide group deck.",
+    "presentation_files_status": "Sunum dosyaları, toplulaştırılmış sunum kanıtı ve yeniden üretim betiği 26 Kasım 2026 tarihinde proje1/sunum klasörüyle birlikte depodan kaldırıldı. Bu bölüm 2 Kasım 2026 tarihli doğrulamanın tarihsel kaydıdır; ilgili dosyaların güncel depoda bulunduğu anlamına gelmez."
   }
 }
+
